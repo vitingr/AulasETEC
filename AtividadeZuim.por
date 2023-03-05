@@ -2,7 +2,8 @@ programa {
 
 inclua biblioteca Matematica --> mat
 
-// DESENVOLVIDO POR VITOR GABRIEL SILVA & OTÁVIO GOMES
+// DESENVOLVIDO POR: 
+// VITOR GABRIEL SILVA & OTAVIO GOMES
 
   funcao inicio() {
     
@@ -20,48 +21,43 @@ inclua biblioteca Matematica --> mat
 
     // IMC ABAIXO DO PESO
     se (imc < 18.5) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é ", imc, " é considerado ABAIXO DO PESO NORMAL!\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+  	  texto("ABAIXO DO PESO NORMAL!", imc)
     }
 
     // IMC PESO NORMAL
     senao se (imc == 18.5 ou imc < 24.9) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é ", imc, " é considerado PESO NORMAL!\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+      texto("PESO NORMAL!", imc)
     }
 
     // IMC EXCESSO DE PESO
     senao se (imc == 25 ou imc < 29.9) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é " , imc, " é considerado EXCESSO DE PESO\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+      texto("EXCESSO DE PESO!", imc)
     }
 
     // IMC OBESIDADE CLASSE I
     senao se (imc == 30 ou imc < 34.9) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é ", imc, " é considerado OBESIDADE CLASSE I\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+      texto("OBESIDADE CLASSE I!", imc)
     }
 
     // IMC OBESIDADE CLASSE II
     senao se (imc == 35 ou imc < 39.9) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é " , imc, " é considerado OBESIDADE CLASSE II\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+      texto("OBESIDADE CLASSE II!", imc)
     }
 
     // IMC OBESIDADE CLASSE III
     senao se (imc >= 40) {
-      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
-      escreva("\nO IMC é ", imc, " é considerado OBESIDADE CLASSE III\n")
-      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+      texto("OBESIDADE CLASSE III!", imc)
     }
 
     senao {
-      escreva("Valor Inválido")
+      escreva("Valor Invalido")
     }
   }
+
+  funcao cadeia texto(cadeia texto, real imc) {
+      escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
+      escreva("\nO IMC ", imc, " é considerado ", texto ,"\n")
+      escreva("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+  }
+
 }
